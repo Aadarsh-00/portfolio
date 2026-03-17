@@ -811,3 +811,259 @@ sup {
   color: #f0f0f0;
   margin: 0;
 }
+
+/* NEW HERO SECTION */
+.new-hero-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #fff5f5;
+  background-image: url("https://www.transparenttextures.com/patterns/classy-fabric.png");
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-nav {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  z-index: 10;
+}
+
+.hero-nav a {
+  text-decoration: none;
+  color: #1a1a1a;
+  letter-spacing: 2px;
+  transition: color 0.3s;
+}
+
+.hero-nav a:hover {
+  color: #1a5d3f;
+}
+
+.hero-content {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-flower {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 400px;
+  max-width: 40vw;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.hero-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18vw;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  color: #1a5d3f;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: -2px;
+  z-index: 1;
+}
+
+.h-sunflower {
+  position: absolute;
+  right: -0.5vw;
+  bottom: 2.5vw;
+  width: 4vw;
+  z-index: 2;
+}
+
+.hero-pfp {
+  position: absolute;
+  height: 95%;
+  max-height: 90vh;
+  object-fit: contain;
+  z-index: 5;
+  bottom: 0;
+}
+
+.hero-badge {
+  background: white;
+  border-radius: 50px;
+  padding: 8px 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  z-index: 10;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.hero-badge a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Arrow Hover Animations */
+.arrow-container {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
+}
+
+.up-arrow {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.right-arrow {
+  transform: translate(-100%, 100%);
+  opacity: 0;
+}
+
+.hero-badge:hover .up-arrow {
+  transform: translate(100%, -100%);
+  opacity: 0;
+}
+
+.hero-badge:hover .right-arrow {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.hero-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.cv-badge {
+  position: absolute;
+  top: 45%;
+  right: 15%;
+}
+
+.cv-badge a {
+  color: #0b2e8a;
+  font-weight: 600;
+}
+
+.hero-bottom-left {
+  position: absolute;
+  bottom: 8%;
+  left: 5%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.design-row-1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-graphic {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 3rem;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+
+.designs-badge {
+  margin-bottom: 10px;
+}
+
+.designs-badge a {
+  color: #0b2e8a;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.text-designer {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: 4.5rem;
+  color: #0b2e8a;
+  line-height: 0.8;
+  letter-spacing: -1px;
+}
+
+.bottom-left-sunflower {
+  position: absolute;
+  bottom: -30px;
+  right: -90px;
+  width: 120px;
+  z-index: -1;
+}
+
+.hero-bottom-right {
+  position: absolute;
+  bottom: 8%;
+  right: 5%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.badge-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+.projects-badge a {
+  color: #1a5d3f;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.text-techie {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: 4.5rem;
+  color: #3e8e41; /* Slightly darker green */
+  line-height: 0.8;
+  letter-spacing: -1px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hero-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+  }
+  .hero-bg-text { font-size: 24vw; letter-spacing: -1px; }
+  .text-designer, .text-techie { font-size: 2.5rem; }
+  .text-graphic { font-size: 2rem; }
+  .bottom-left-sunflower { width: 80px; right: -50px; bottom: -20px; }
+  .cv-badge { top: 30%; right: 5%; }
+  .hero-bottom-left { bottom: 5%; left: 2%; }
+  .hero-bottom-right { bottom: 5%; right: 2%; }
+}
