@@ -816,7 +816,7 @@ sup {
 .new-hero-wrapper {
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   background-color: #fff5f5;
   background-image: url("https://www.transparenttextures.com/patterns/classy-fabric.png");
@@ -826,21 +826,22 @@ sup {
 }
 
 .hero-nav {
-  padding: 30px;
+  padding: 28px 40px;
   display: flex;
   justify-content: center;
   gap: 40px;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   z-index: 10;
+  position: relative;
 }
 
 .hero-nav a {
   text-decoration: none;
   color: #1a1a1a;
-  letter-spacing: 2px;
-  transition: color 0.3s;
+  letter-spacing: 3px;
+  transition: color 0.3s ease;
 }
 
 .hero-nav a:hover {
@@ -852,46 +853,48 @@ sup {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  overflow: visible;
+  padding-bottom: 0;
 }
 
 .top-flower {
   position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 400px;
-  max-width: 40vw;
+  top: -60px;
+  right: -40px;
+  width: clamp(150px, 25vw, 400px);
   z-index: 5;
   pointer-events: none;
 }
 
 .hero-bg-text {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 18vw;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-size: clamp(60px, 17vw, 320px);
+  font-family: 'Inter', sans-serif;
   font-weight: 900;
   color: #1a5d3f;
   line-height: 1;
   white-space: nowrap;
-  letter-spacing: -2px;
+  letter-spacing: -0.04em;
   z-index: 1;
+  user-select: none;
 }
 
 .h-sunflower {
   position: absolute;
   right: -0.5vw;
-  bottom: 2.5vw;
-  width: 4vw;
+  bottom: 2vw;
+  width: clamp(20px, 3.5vw, 60px);
   z-index: 2;
 }
 
 .hero-pfp {
-  position: absolute;
-  height: 95%;
-  max-height: 90vh;
+  position: relative;
+  height: 90%;
+  max-height: 85vh;
   object-fit: contain;
   z-index: 5;
   bottom: 0;
@@ -900,19 +903,20 @@ sup {
 .hero-badge {
   background: white;
   border-radius: 50px;
-  padding: 8px 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 1rem;
+  padding: 8px 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
   z-index: 10;
   transition: transform 0.3s, box-shadow 0.3s;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.06);
+  white-space: nowrap;
 }
 
 .hero-badge a {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   text-decoration: none;
   color: inherit;
 }
@@ -923,9 +927,10 @@ sup {
   width: 16px;
   height: 16px;
   overflow: hidden;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .arrow {
@@ -957,13 +962,14 @@ sup {
 
 .hero-badge:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
+/* CV Badge */
 .cv-badge {
   position: absolute;
-  top: 45%;
-  right: 15%;
+  top: 42%;
+  right: 14%;
 }
 
 .cv-badge a {
@@ -971,10 +977,11 @@ sup {
   font-weight: 600;
 }
 
+/* Bottom Left */
 .hero-bottom-left {
   position: absolute;
-  bottom: 8%;
-  left: 5%;
+  bottom: 4%;
+  left: 4%;
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -983,47 +990,45 @@ sup {
 .design-row-1 {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  margin-bottom: 4px;
 }
 
 .text-graphic {
   font-family: 'Patrick Hand', cursive;
-  font-size: 3rem;
+  font-size: clamp(1.6rem, 3.5vw, 3rem);
   color: #1a1a1a;
   letter-spacing: 1px;
-}
-
-.designs-badge {
-  margin-bottom: 10px;
 }
 
 .designs-badge a {
   color: #0b2e8a;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .text-designer {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 800;
-  font-size: 4.5rem;
+  font-size: clamp(2rem, 5.5vw, 5rem);
   color: #0b2e8a;
-  line-height: 0.8;
-  letter-spacing: -1px;
+  line-height: 0.85;
+  letter-spacing: -0.03em;
 }
 
 .bottom-left-sunflower {
   position: absolute;
-  bottom: -30px;
-  right: -90px;
-  width: 120px;
+  bottom: -25px;
+  right: -80px;
+  width: clamp(60px, 10vw, 120px);
   z-index: -1;
 }
 
+/* Bottom Right */
 .hero-bottom-right {
   position: absolute;
-  bottom: 8%;
-  right: 5%;
+  bottom: 4%;
+  right: 4%;
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -1033,37 +1038,96 @@ sup {
 .badge-row {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .projects-badge a {
   color: #1a5d3f;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .text-techie {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 800;
-  font-size: 4.5rem;
-  color: #3e8e41; /* Slightly darker green */
-  line-height: 0.8;
-  letter-spacing: -1px;
+  font-size: clamp(2rem, 5.5vw, 5rem);
+  color: #3e8e41;
+  line-height: 0.85;
+  letter-spacing: -0.03em;
 }
 
-/* Responsiveness */
+/* ============= RESPONSIVENESS ============= */
+
+/* Large tablets & small laptops */
+@media (max-width: 1200px) {
+  .cv-badge { top: 38%; right: 10%; }
+  .top-flower { width: clamp(140px, 22vw, 300px); top: -40px; right: -30px; }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .hero-nav { gap: 30px; padding: 22px 30px; font-size: 0.85rem; }
+  .cv-badge { top: 35%; right: 8%; }
+  .hero-bottom-left { bottom: 3%; left: 3%; }
+  .hero-bottom-right { bottom: 3%; right: 3%; }
+  .bottom-left-sunflower { right: -40px; width: 80px; }
+  .hero-pfp { height: 80%; }
+}
+
+/* Small tablets & large phones landscape */
 @media (max-width: 768px) {
   .hero-nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 15px;
+    flex-direction: row;
+    gap: 20px;
+    padding: 16px 20px;
+    font-size: 0.75rem;
   }
-  .hero-bg-text { font-size: 24vw; letter-spacing: -1px; }
-  .text-designer, .text-techie { font-size: 2.5rem; }
-  .text-graphic { font-size: 2rem; }
-  .bottom-left-sunflower { width: 80px; right: -50px; bottom: -20px; }
-  .cv-badge { top: 30%; right: 5%; }
-  .hero-bottom-left { bottom: 5%; left: 2%; }
-  .hero-bottom-right { bottom: 5%; right: 2%; }
-}
+  .hero-nav a { letter-spacing: 2px; }
+  .hero-pfp { height: 70%; }
+  .cv-badge { top: 25%; right: 5%; }
+  .hero-badge { padding: 6px 12px; font-size: 0.72rem; }
+  .hero-bottom-left { bottom: 2%; left: 2%; }
+  .hero-bottom-right { bottom: 2%; right: 2%; }
+  .text-designer, .text-techie { font-size: clamp(1.6rem, 5vw, 3rem); }
+  .text-graphic { font-size: clamp(1.2rem, 3vw, 2rem); }
+  .bottom-left-sunflower { width: 50px; right: -30px; bottom: -10px; }
+  .top-flower { top: -25px; right: -15px; }
+}
+
+/* Phones */
+@media (max-width: 576px) {
+  .new-hero-wrapper { height: 100svh; }
+  .hero-nav {
+    gap: 16px;
+    padding: 12px 16px;
+    font-size: 0.65rem;
+  }
+  .hero-nav a { letter-spacing: 1.5px; }
+  .hero-pfp { height: 60%; }
+  .hero-bg-text { font-size: clamp(48px, 20vw, 120px); }
+  .cv-badge { top: 20%; right: 3%; }
+  .hero-badge { padding: 5px 10px; font-size: 0.62rem; }
+  .arrow-container { width: 12px; height: 12px; }
+  .hero-bottom-left { bottom: 2%; left: 2%; }
+  .hero-bottom-right { bottom: 2%; right: 2%; }
+  .text-designer, .text-techie { font-size: clamp(1.4rem, 7vw, 2.2rem); }
+  .text-graphic { font-size: clamp(1rem, 4vw, 1.5rem); }
+  .bottom-left-sunflower { display: none; }
+  .top-flower { width: 100px; top: -15px; right: -10px; }
+  .h-sunflower { width: clamp(14px, 3vw, 25px); }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+  .hero-nav { gap: 12px; padding: 10px 12px; font-size: 0.58rem; }
+  .hero-pfp { height: 50%; }
+  .hero-bg-text { font-size: 18vw; }
+  .cv-badge { top: 16%; right: 2%; }
+  .hero-badge { padding: 4px 8px; font-size: 0.55rem; }
+  .arrow-container { width: 10px; height: 10px; }
+  .text-designer, .text-techie { font-size: clamp(1.2rem, 7vw, 1.8rem); }
+  .text-graphic { font-size: 1rem; }
+  .top-flower { width: 80px; top: -8px; right: -8px; }
+}
+
+
